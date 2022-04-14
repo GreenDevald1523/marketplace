@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Начальная страница</title>
+</head>
+
+<body>
+    <div id="page-preloader" class="preloader">
+        <div class="loader"><span id="load_perc"></span></div>
+    </div>
+    <div class="wrapper">
+        <div class="content">
+            <header class="header">
+                <div class="container">
+                    <div class="personal-cab fadeInUp">
+                        <a href="index.html" class="logo">
+                            <img src="./img/Fev.png" alt="logo">
+                        </a>
+                        <nav class="menu">
+                            <ul class="menu__items">
+                                <a href="./contacts.html" class="menu__item">
+                                    <li>
+                                        <img src="./img/address-book.png" alt="address-book">
+                                    </li>
+                                </a>
+                                <a class="menu__item">
+                                    <li>
+                                        <img src="./img/trash.png" alt="trash">
+                                    </li>
+                                </a>
+                                <a href="./korzina.html" class="menu__item">
+                                    <li>
+                                        <img src="./img/shopping-cart.png" alt="korzina">
+                                    </li>
+                                </a>
+                                <a href="./my-cabinet.html" class="menu__item">
+                                    <li>
+                                        <img src="./img/user.png" alt="user">
+                                    </li>
+                                </a>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <main class="main">
+                <div class="container">
+                    <button id="start" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" href="./search.html" class="start inp-anim">
+                        Регистрация
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Регистрация</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form onsubmit="handleSubmit">
+                                        <div class="mb-3">
+                                            <label class="form-label">ФИО</label>
+                                            <input onchange="handleChange" value="" class="form-control" id="exampleFormControlInputFIO" placeholder="Иванов Иван Иванович">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Адрес электронной почты</label>
+                                            <input onchange="handleChange" value="" type="email" class="form-control" id="exampleFormControlInputMail" placeholder="name@example.com">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlPassword" class="form-label">Пароль</label>
+                                            <input type="password" class="form-control" id="exampleFormControlPasswordF" rows="3" placeholder="mtucithebest228">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlPassword" class="form-label">Пароль (повторно)</label>
+                                            <input type="password" class="form-control" id="exampleFormControlPasswordS" rows="3" placeholder="mtucithebest228">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                                    <button type="button" class="btn btn-primary" id="reg" onclick="window.location.href='search.html'">Зарегистрироваться</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script>
+        const start = document.getElementById('start')
+        const btnRegistration = document.getElementById('reg')
+        const fio = document.getElementById('exampleFormControlInputFIO')
+        const email = document.getElementById('exampleFormControlInputMail')
+        const accName = document.getElementById('acc__name')
+        const accMail = document.getElementById('acc__mail')
+
+        handleSubmit = (e) => {
+            e.preventDefault()
+        }
+
+        handleChange = (e) => {
+            e.preventDefault()
+        }
+
+        start.addEventListener('click', (e) => {
+            e.preventDefault()
+            start.classList.remove('inp-anim')
+        })
+
+        btnRegistration.addEventListener('click', (e) => {
+            e.preventDefault()
+            accName.innerHTML = `${fio}`
+            accMail.innerHTML = `${email}`
+        })
+
+        document.body.onload = function() {
+            setTimeout((function() {
+                let o = document.getElementById("page-preloader");
+                o.classList.contains("done") || o.classList.add("done")
+            }))
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+
+</html>

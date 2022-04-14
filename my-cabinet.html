@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Поиск</title>
+    <title>Личный кабинет</title>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
         <div class="content">
             <header class="header">
                 <div class="container">
-                    <div class="personal-cab">
+                    <div class="personal-cab fadeInUp">
                         <a href="search.html" class="logo">
                             <img src="./img/Fev.png" alt="logo">
                         </a>
@@ -50,12 +50,20 @@
             </header>
             <main class="main ">
                 <div class="container ">
-                    <h1 class="main__title fadeInLeft ">
-                        Найдите товар по лучшей цене!
+                    <h1 class="name ">
+                        Мой кабинет
                     </h1>
-                    <form action="" class="form" method="GET">
-                        <input type="text" id="search" class="inp-anim" placeholder="🔍Поиск товара ">
-                    </form>
+                    <div class="FIO">
+                        <div id="acc__name">
+
+                        </div>
+                        <div id="acc__mail">
+
+                        </div>
+                    </div>
+                    <button id="escape" onclick="window.location.href='index.html'">
+                        Выйти из аккаунта
+                    </button>
                 </div>
             </main>
         </div>
