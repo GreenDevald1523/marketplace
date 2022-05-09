@@ -96,13 +96,13 @@ button {
 
 .menu {
     width: 100%;
-    margin-left: 710px;
     display: flex;
-    align-items: center;
+    justify-content: end;
 }
 
 .menu__items {
     display: flex;
+    align-items: center;
 }
 
 .menu__item {
@@ -170,7 +170,7 @@ button {
 
 .main {
     margin-top: 140px;
-    height: 86.7vh;
+    height: 100vh;
     width: 100%;
     background-color: #494d56;
     font-family: 'Play';
@@ -307,6 +307,5 @@ button {
 }
 
 .FIO {
-    text-align: center;
     font-size: 20px;
 }

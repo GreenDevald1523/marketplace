@@ -62,7 +62,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form onsubmit="handleSubmit" action="contact.php" method="get">
+                                    <form onsubmit="handleSubmit" action="contact.php" method="post">
                                         <div class="mb-3">
                                             <label class="form-label">ФИО</label>
                                             <input onchange="handleChange" value="" class="form-control" id="exampleFormControlInputFIO" placeholder="Иванов Иван Иванович">
@@ -79,11 +79,11 @@
                                             <label for="exampleFormControlPassword" class="form-label">Пароль (повторно)</label>
                                             <input type="password" class="form-control" id="exampleFormControlPasswordS" rows="3" placeholder="mtucithebest228">
                                         </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                                            <button type="submit" class="btn btn-primary" id="reg" onclick="window.location.href='search.html'">Зарегистрироваться</button>
+                                        </div>
                                     </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                                    <button type="button" class="btn btn-primary" id="reg" onclick="window.location.href='search.html'">Зарегистрироваться</button>
                                 </div>
                             </div>
                         </div>
